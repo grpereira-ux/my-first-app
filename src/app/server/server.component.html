@@ -1,30 +1,3 @@
-<label>Server Name</label>
-<input 
-    type="text" 
-    class="form-control"
-    placeholder="Insert the name for your new server here..."
-    (keydown)="enterKeySave($event)" 
-    [(ngModel)]="serverName"> 
-<button 
-    class="btn btn-primary"
-    [disabled]="!allowNewServer"
-    (click)="onCreateServer()">Add Server</button>
-<p>{{ serverCreationStatus }}</p>
-<hr>
-<label>Username</label>
-<input 
-    type="text" 
-    class="form-control"
-    placeholder="Insert username here..."
-    [(ngModel)]="username">
-    <div class="d-flex justify-content-between">
-        <button 
-            class="btn btn-primary"
-            [disabled]="username === ''"
-            (click)="onFormSave()">Save</button>
-        <button 
-            class="btn btn-secundary"
-            [disabled]="username === ''"
-            (click)="onReset()">Reset</button>
-    </div>
-<p>{{ showUsername }}</p>
+<p>The Server ID {{ serverId }} is <span class="server-status"
+    [ngStyle]="{color: serverStatus=='ONLINE' ? 'green': 'red'}">
+    {{ serverStatus }}</span></p>

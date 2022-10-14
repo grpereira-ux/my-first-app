@@ -1,17 +1,3 @@
-label {
+.server-status {
     font-weight: 700;
-}
-
-input {
-    margin: 8px 0px;
-}
-
-.btn-primary, .btn-secundary {
-    font-weight: 700;
-    padding: 8px 16px;
-    margin-bottom: 16px;
-}
-
-.btn-primary:disabled {
-    background-color: gray;
 }
