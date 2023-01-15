@@ -18,17 +18,25 @@ export class ServersComponent implements OnInit {
     }, 2000);
   }
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
   }
 
   onCreateServer() {
     if (!this.serverName) {
-      this.serverCreationStatus = 'Please, insert a server name.' 
+      this.serverCreationStatus = 'Please, insert a server name.'
     }
     else {
       this.serverCreated = true;
       this.servers.push(this.serverName);
       this.serverCreationStatus = this.serverName + ' was created!';
+      this.serverName = '';
+    }
+  }
+
+  //Function to save a form with the Enter key
+  enterKeySave(event) {
+    if (event.keyCode === 13){
+      this.onCreateServer();
     }
   }
 }
