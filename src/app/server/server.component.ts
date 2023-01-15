@@ -15,4 +15,8 @@ export class ServerComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  getColor() {
+    this.serverStatus === 'ONLINE' ? 'green' : 'red';
+  }
 }

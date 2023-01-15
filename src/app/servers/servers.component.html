@@ -7,9 +7,8 @@
     [(ngModel)]="serverName">
 <button
     class="btn btn-primary"
-    [disabled]="!allowNewServer"
+    [disabled]="serverName === ''"
     (click)="onCreateServer()">Add Server</button>
-<!-- <p>{{ serverCreationStatus }}</p> -->
 <p *ngIf="serverCreated; else noServer">{{ serverCreationStatus }}</p>
 <ng-template #noServer>
     <p>No server created.</p>

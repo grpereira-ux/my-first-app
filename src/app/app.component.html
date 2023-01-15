@@ -9,25 +9,33 @@
         </div>
         <div class="col-6">
             <label>Username</label>
-            <input 
-                type="text" 
+            <input
+                type="text"
                 class="form-control"
                 placeholder="Insert username here..."
-                (keydown)="enterKeySave($event)" 
+                (keydown)="enterKeySave($event)"
                 [(ngModel)]="username">
             <div class="d-flex justify-content-between">
-                <button 
-                    class="btn btn-primary"
-                    [disabled]="username === ''"
-                    (click)="onFormSave()">Save
+                <button
+                  class="btn btn-primary"
+                  [disabled]="username === ''"
+                  (click)="onFormSave()">Save
                 </button>
-                <button 
-                    class="btn btn-secundary"
-                    [disabled]="username === ''"
-                    (click)="onReset()">Reset
+                <button
+                  class="btn btn-primary"
+                  (click)="addOne()">+ 1
+                </button>
+                <button
+                  class="btn btn-secundary"
+                  [disabled]="username === ''"
+                  (click)="onReset()">Reset
                 </button>
             </div>
             <p>{{ showUsername }}</p>
+            <div
+              *ngFor="let logItem of log; let i = index"
+              [ngStyle]="{backgroundColor: i >= 3 ? 'palegreen' : 'transparent'}"
+            >{{ logItem }}</div>
         </div>
     </div>
 </div>

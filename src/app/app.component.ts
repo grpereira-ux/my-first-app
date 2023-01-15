@@ -9,8 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   showUsername = 'No Username entered.'
   username = '';
+  log = [];
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
   }
 
   onFormSave() {
@@ -21,7 +22,11 @@ export class AppComponent {
     this.showUsername = 'Username reseted!';
     this.username = '';
   }
-  
+
+  addOne() {
+    this.log.push(new Date());
+  }
+
   //Function to save a form with the Enter key
   enterKeySave(event) {
     if (event.keyCode === 13){

@@ -1,3 +1,5 @@
-<p>The Server ID {{ serverId }} is <span class="server-status"
-    [ngStyle]="{color: serverStatus=='ONLINE' ? 'green': 'red'}">
-    {{ serverStatus }}</span></p>
+<p>The Server ID {{ serverId }} is
+  <span class="server-status"
+  [ngClass]="{online: serverStatus === 'ONLINE'}">
+  {{ serverStatus }}</span>
+</p>

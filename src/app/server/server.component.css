@@ -1,3 +1,10 @@
 .server-status {
     font-weight: 700;
+    border-radius: 24px;
+    background-color: red;
+    color: aliceblue;
+    padding: 4px 12px;
+    text-align: center;
 }
+
+.online{background-color: green;}
